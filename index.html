@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóm tắt Tờ trình HNNCC Vista Verde 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-emerald-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-emerald-700 p-2.5 rounded-xl">
+                    <i class="fa-solid fa-building-user text-2xl text-emerald-200"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">CHUNG CƯ VISTA VERDE</h1>
+                    <p class="text-xs text-emerald-200">Tổng hợp Tờ trình - Hội nghị Nhà Chung Cư 2026</p>
+                </div>
+            </div>
+            <!-- Quick Stats -->
+            <div class="flex items-center gap-3 text-xs">
+                <span class="bg-emerald-800 border border-emerald-700 px-3 py-1.5 rounded-lg text-emerald-100 font-medium">
+                    <i class="fa-solid fa-file-lines mr-1.5 text-emerald-300"></i>23 Tờ trình
+                </span>
+                <span class="bg-emerald-800 border border-emerald-700 px-3 py-1.5 rounded-lg text-emerald-100 font-medium">
+                    <i class="fa-solid fa-calendar mr-1.5 text-emerald-300"></i>14/09/2026
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+
+        <!-- Search & Filter Bar -->
+        <div class="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <div class="relative w-full md:w-96">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Tìm kiếm tờ trình..." 
+                    class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white transition-all">
+            </div>
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                <button onclick="filterCategory('all')" class="category-btn active px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-900 text-white transition">Tất cả (23)</button>
+                <button onclick="filterCategory('bao-tri')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Bảo trì (8)</button>
+                <button onclick="filterCategory('van-hanh')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Vận hành (8)</button>
+                <button onclick="filterCategory('khac')" class="category-btn px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Quy chế & Khác (7)</button>
+            </div>
+        </div>
+
+        <!-- Section 1: Bảo trì -->
+        <section id="bao-tri-section" class="mb-12">
+            <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-200">
+                <div class="w-2 h-6 bg-amber-500 rounded-full"></div>
+                <h2 class="text-lg font-bold text-slate-800">I. CÁC TỜ TRÌNH BẢO TRÌ <span class="text-xs font-normal text-slate-500 ml-2">(Sử dụng Quỹ Bảo trì)</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Tờ trình 01 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 01</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Chống thấm mái nhà vệ sinh tầng 5</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Mái nhà vệ sinh tầng 5 bị thấm nước kéo dài, xuất hiện vết nứt, trần/tường bị ố vàng, ẩm mốc, suy giảm tuổi thọ kết cấu.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">270.782.494 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Chào giá cạnh tranh</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 02 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 02</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay khung xương inox, sàn nhựa hồ bơi</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Sàn nhựa cong vênh, nứt bể tạo cạnh sắc nhọn; khung xương bị mục nặng, tiềm ẩn nguy cơ tai nạn nguy hiểm.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">468.234.900 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Chào giá cạnh tranh</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 03 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 03</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Cải tạo sàn cao su sân chơi trẻ em</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Sàn cao su tầng trệt & tầng 5 bị bong tróc, lộ nền bê tông, đọng nước, mất khả năng giảm chấn an toàn.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">PA 1 (Hạt EPDM):</span><span class="font-semibold text-emerald-700">494.894.400 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">PA 2 (Gạch SBR):</span><span class="font-semibold text-emerald-700">480.000.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Chào giá cạnh tranh</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 04 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 04</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Sửa chữa ống dẫn rác trung tâm (4 tháp)</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Ống nghiêng bị nứt vỡ rò rỉ nước rác; nắp ngăn cháy bị rơi; tháp 2 & L có 2 trục vỡ tiếp xúc nguy cơ sụt gãy.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">308.734.800 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Chào giá cạnh tranh</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 05 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 05</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Sửa chữa mái che khu BBQ tầng 5</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Chi tiết thép mái che gỉ sét nghiêm trọng, mục nát, suy giảm chịu lực, bị dột nước khi mưa.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">739.200.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Đấu thầu (muasamcong)</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 06 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 06</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay cửa gỗ chống cháy phòng rác (110 cửa)</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">110 cửa phòng rác bị cong vênh, rỉ sét, hỏng khóa, không còn kín khít và không đạt chuẩn PCCC QCVN 06:2022/BXD.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">2.543.420.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Đấu thầu (muasamcong)</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 07 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 07</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Cải tạo phòng thư viện</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Sàn thư viện hư hỏng, thảm bẩn có mùi hôi, tường ố bẩn loang lổ và giấy dán tường bong tróc.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">292.527.620 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Chào giá cạnh tranh</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 08 -->
+                <div class="card bao-tri bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 08</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Bảo trì</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay màng lọc UF nước sinh hoạt</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Màng lọc UF đã dùng vượt quá 3-5 năm khuyến cáo, sợi màng bị lão hóa/giòn, rủi ro đứt rách lây nhiễm nguồn nước.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">PA 1 (Wesco / Eurotec):</span><span class="font-semibold text-emerald-700">2.621.208.480 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">PA 2 (Ntesco - VN):</span><span class="font-semibold text-emerald-700">797.280.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phương thức:</span><span class="text-slate-700">Biểu quyết chọn 1 trong 2</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 2: Vận hành -->
+        <section id="van-hanh-section" class="mb-12">
+            <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-200">
+                <div class="w-2 h-6 bg-blue-600 rounded-full"></div>
+                <h2 class="text-lg font-bold text-slate-800">II. CÁC TỜ TRÌNH VẬN HÀNH <span class="text-xs font-normal text-slate-500 ml-2">(Sử dụng Quỹ Kết dư vận hành / Quỹ Vận hành)</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Tờ trình 09 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 09</span>
+                            <span class="text-xs text-slate-500 font-mono">Kết dư Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay bàn ghế tầng 23 tháp Orchid</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Thay thế bàn ghế bị hư hỏng, bong tróc nhằm đảm bảo mỹ quan và phục vụ không gian sinh hoạt chung.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">349.063.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 10 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 10</span>
+                            <span class="text-xs text-slate-500 font-mono">Chủ trương</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Mở rộng Phòng trẻ em tháp Orchid</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Sắp xếp lại diện tích giữa Phòng trẻ em và Sảnh chờ tháp Orchid để tăng không gian vui chơi trong nhà cho trẻ.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Chi phí:</span><span class="text-slate-700">Tận dụng diện tích & thiết bị hiện hữu</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 11 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 11</span>
+                            <span class="text-xs text-slate-500 font-mono">Kết dư Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay thiết bị khu vui chơi trẻ em</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Thay thế các thiết bị vận động trong nhà và ngoài trời bị xuống cấp, mất an toàn cho trẻ em.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">784.080.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 12 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 12</span>
+                            <span class="text-xs text-slate-500 font-mono">Kết dư Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Mua sắm ghế khu vực thư viện</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Thay mới 40 – 50 ghế ngồi xuống cấp tại thư viện để nâng cao trải nghiệm đọc sách và học tập.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">98.065.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 13 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 13</span>
+                            <span class="text-xs text-slate-500 font-mono">Kết dư Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay linh kiện máy tập phòng Gym</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Thay linh kiện bị mài mòn cho máy tập (dùng linh kiện Technogym chính hãng cho các máy thương hiệu Technogym).</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">129.911.100 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 14 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 14</span>
+                            <span class="text-xs text-slate-500 font-mono">Kết dư Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thay thảm lót sàn phòng Gym</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Thay thảm lót bị tróc rách, xẹp móp, ẩm mốc phát sinh mùi hôi nguy hiểm trơn trượt cho cư dân.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Kinh phí đề xuất:</span><span class="font-semibold text-emerald-700">190.960.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Gồm dự phòng 10%:</span><span class="text-slate-700">Chưa bao gồm VAT</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 15 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 15</span>
+                            <span class="text-xs text-slate-500 font-mono">Quy định Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Kiểm soát ra/vào tiện ích bằng Sinh trắc học</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Sử dụng FaceID/Vân tay làm phương thức duy nhất để vào tiện ích, ngừng dùng thẻ cư dân nhằm tăng cường an ninh.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Áp dụng:</span><span class="text-slate-700">Toàn bộ khu tiện ích chung</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 16 -->
+                <div class="card van-hanh bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 16</span>
+                            <span class="text-xs text-slate-500 font-mono">Quỹ Vận hành</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Cho thuê tầng mái lắp điện mặt trời (Leasing)</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Cho XSolar thuê 5.395 m² mái trong 10 năm. XSolar đầu tư 100% chi phí. Chung cư mua điện với giá = 85% giá EVN.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Tiền đặt cọc:</span><span class="font-semibold text-emerald-700">200.000.000 VNĐ</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Phạt hủy HĐ trước hạn:</span><span class="text-rose-600 font-semibold">4.634.000.000 VNĐ</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Quy chế & Khác -->
+        <section id="khac-section" class="mb-12">
+            <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-200">
+                <div class="w-2 h-6 bg-purple-600 rounded-full"></div>
+                <h2 class="text-lg font-bold text-slate-800">III. CÁC TỜ TRÌNH QUY CHẾ, HỢP ĐỒNG & KHÁC</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Tờ trình 17 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 17</span>
+                            <span class="text-xs text-slate-500 font-mono">Hợp đồng</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Gia hạn hợp đồng QLVH với Savills</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Xin ý kiến 3 phương án: Gia hạn 1 năm với Savills (562,7 triệu/tháng); hoặc gia hạn theo nhiệm kỳ BQT; hoặc tổ chức đấu thầu công khai đơn vị mới.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Phí dịch vụ mới (PA1):</span><span class="font-semibold text-emerald-700">562.701.220 VNĐ/tháng</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 18 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 18</span>
+                            <span class="text-xs text-slate-500 font-mono">Nội quy</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Sửa đổi, bổ sung Nội quy Chung cư</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Bổ sung định nghĩa hồ bơi; chế tài nghiêm ném đồ tầng cao; quy định rọ mõm thú nuôi; tăng phí mở thẻ an ninh lên 200.000đ; quy định ký quỹ Fit-out.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Phí cấp lại thẻ:</span><span class="font-semibold text-slate-700">200.000 VNĐ/thẻ</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 19 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 19</span>
+                            <span class="text-xs text-slate-500 font-mono">Tài chính</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Điều chỉnh Quy chế tài chính BQT</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Nâng hạn mức sửa chữa cấp bách không qua HNNCC từ 500tr lên 1 tỷ/sự vụ (tối đa 2 tỷ/năm); Trưởng BQT được ký thay TV tài chính trong một số trường hợp.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Hạn mức khẩn cấp mới:</span><span class="font-semibold text-emerald-700">1 Tỷ VNĐ/sự vụ</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 20 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 20</span>
+                            <span class="text-xs text-slate-500 font-mono">Bù đắp Quỹ</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Dùng Kết dư vận hành bù thiếu hụt PQL</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Sử dụng Quỹ kết dư vận hành bù đắp cho phần thiếu hụt chi phí vận hành giai đoạn 2025 - 2026 do giá vật tư/nhân công tăng.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Số tiền bù đắp:</span><span class="font-semibold text-emerald-700">2.908.209.384 VNĐ</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 21 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 21</span>
+                            <span class="text-xs text-slate-500 font-mono">Chuyển nguồn Quỹ</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Chuyển 20 tỷ Kết dư vận hành sang Bảo trì</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Chuyển 20.000.000.000 VNĐ từ Kết dư vận hành 2018-2024 sang Quỹ bảo trì gửi tiết kiệm ngân hàng MB theo tư vấn của kiểm toán.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Số tiền chuyển:</span><span class="font-semibold text-emerald-700">20.000.000.000 VNĐ</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 22 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 22</span>
+                            <span class="text-xs text-slate-500 font-mono">Thù lao BQT</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Điều chỉnh mức chi trả thù lao BQT</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Điều chỉnh thù lao Ban Quản trị nhiệm kỳ 2026–2029 thành 15.000.000 VNĐ/thành viên/tháng để gắn liền trách nhiệm công việc.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3 mt-2 text-xs space-y-1.5">
+                        <div class="flex justify-between"><span class="text-slate-500">Mức thù lao mới:</span><span class="font-semibold text-emerald-700">75.000.000 VNĐ/tháng</span></div>
+                    </div>
+                </div>
+
+                <!-- Tờ trình 23 -->
+                <div class="card khac bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between col-span-1 md:col-span-2 lg:col-span-3">
+                    <div>
+                        <div class="flex justify-between items-start gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-1 rounded-md">Tờ trình 23</span>
+                            <span class="text-xs text-slate-500 font-mono">Phí Quản lý Vận hành 2027</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Phương án Ngân sách Vận hành 2027 & Phí Quản lý</h3>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">Trình HNNCC biểu quyết 04 phương án Phí Quản lý Vận hành năm 2027 do Savills xây dựng dựa trên trượt giá và nhu cầu chi tiêu.</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs mt-3">
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                <div class="font-bold text-slate-800">Phương án 1</div>
+                                <div class="text-emerald-700 font-semibold my-1">16.500 VNĐ/m²/tháng</div>
+                                <div class="text-slate-500 text-[11px]">Tăng 7,97% (+1.218đ)</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                <div class="font-bold text-slate-800">Phương án 2</div>
+                                <div class="text-emerald-700 font-semibold my-1">15.600 VNĐ/m²/tháng</div>
+                                <div class="text-slate-500 text-[11px]">Tăng 2,08% (+318đ)</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                <div class="font-bold text-slate-800">Phương án 3</div>
+                                <div class="text-emerald-700 font-semibold my-1">19.000 VNĐ/m²/tháng</div>
+                                <div class="text-slate-500 text-[11px]">Tăng 24,33% (+3.718đ)</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                <div class="font-bold text-slate-800">Phương án 4</div>
+                                <div class="text-emerald-700 font-semibold my-1">15.282 VNĐ/m²/tháng</div>
+                                <div class="text-slate-500 text-[11px]">Giữ nguyên phí hiện tại</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 Chung cư Vista Verde - Tài liệu tổng hợp phục vụ Hội nghị Nhà chung cư.</p>
+        </div>
+    </footer>
+
+    <!-- Filter JS -->
+    <script>
+        function filterCards() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterCategory(cat) {
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-emerald-900', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+            event.target.classList.remove('bg-slate-100', 'text-slate-600');
+            event.target.classList.add('bg-emerald-900', 'text-white');
+
+            const secBaoTri = document.getElementById('bao-tri-section');
+            const secVanHanh = document.getElementById('van-hanh-section');
+            const secKhac = document.getElementById('khac-section');
+
+            if (cat === 'all') {
+                secBaoTri.style.display = 'block';
+                secVanHanh.style.display = 'block';
+                secKhac.style.display = 'block';
+            } else if (cat === 'bao-tri') {
+                secBaoTri.style.display = 'block';
+                secVanHanh.style.display = 'none';
+                secKhac.style.display = 'none';
+            } else if (cat === 'van-hanh') {
+                secBaoTri.style.display = 'none';
+                secVanHanh.style.display = 'block';
+                secKhac.style.display = 'none';
+            } else if (cat === 'khac') {
+                secBaoTri.style.display = 'none';
+                secVanHanh.style.display = 'none';
+                secKhac.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
